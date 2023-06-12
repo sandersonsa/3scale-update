@@ -1,0 +1,85 @@
+{
+    "spec": {
+        "template": {
+            "spec": {
+                "containers": [
+                    {
+                        "name": "system-sidekiq",
+                        "env": [
+                            {
+                                "name": "SMTP_ADDRESS",
+                                "valueFrom": {
+                                    "configMapKeyRef": null,
+                                    "secretKeyRef": {
+                                        "key": "address",
+                                        "name": "system-smtp"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "SMTP_USER_NAME",
+                                "valueFrom": {
+                                    "configMapKeyRef": null,
+                                    "secretKeyRef": {
+                                        "key": "username",
+                                        "name": "system-smtp"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "SMTP_PASSWORD",
+                                "valueFrom": {
+                                    "configMapKeyRef": null,
+                                    "secretKeyRef": {
+                                        "key": "password",
+                                        "name": "system-smtp"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "SMTP_DOMAIN",
+                                "valueFrom": {
+                                    "configMapKeyRef": null,
+                                    "secretKeyRef": {
+                                        "key": "domain",
+                                        "name": "system-smtp"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "SMTP_PORT",
+                                "valueFrom": {
+                                    "configMapKeyRef": null,
+                                    "secretKeyRef": {
+                                        "key": "port",
+                                        "name": "system-smtp"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "SMTP_AUTHENTICATION",
+                                "valueFrom": {
+                                    "configMapKeyRef": null,
+                                    "secretKeyRef": {
+                                        "key": "authentication",
+                                        "name": "system-smtp"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "SMTP_OPENSSL_VERIFY_MODE",
+                                "valueFrom": {
+                                    "configMapKeyRef": null,
+                                    "secretKeyRef": {
+                                        "key": "openssl.verify.mode",
+                                        "name": "system-smtp"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}
